@@ -1,0 +1,41 @@
+.zm-navbar.zm-navbar-main{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item {
+    font-weight: 700;
+    color: #dadada;
+    border-left: 3px solid transparent;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item.is-active {
+    background-color: hsla(0,0%,100%,0.1);
+    color: #fff;
+    border-left: 3px solid #7200a1;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item a{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 25px;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item a img{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    margin-right: 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item a span{
+    white-space: nowrap;
+    line-height: normal;
+}

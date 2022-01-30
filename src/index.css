@@ -16,6 +16,18 @@ button, optgroup, select {
   user-select: none;
 }
 
+a {
+  cursor: pointer;
+  color: inherit;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+a, a.active, a:hover {
+  text-decoration: none;
+}
+
 button, input, optgroup, select, textarea {
   padding: 0;
   border: none;
@@ -23,4 +35,13 @@ button, input, optgroup, select, textarea {
   color: inherit;
   background-color: transparent;
   word-break: normal;
+}
+
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol, p, ul {
+  list-style: none;
 }

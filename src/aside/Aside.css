@@ -7,3 +7,9 @@
     padding-top: 70px;
     padding-bottom: 54px;
 }
+
+.zm-sidebar-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

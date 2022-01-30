@@ -5,8 +5,10 @@ import './Aside.css'
 function Aside() {
     return (
         <div className="zm-sidebar">
-            <Brand/>
-            <Main/>
+            <div className="zm-sidebar-wrapper">
+                <Brand/>
+                <Main/>
+            </div>
         </div>
     )
 }
