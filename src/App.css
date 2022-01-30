@@ -1,0 +1,13 @@
+.zm-section.zm-layout.has-player{
+    display: flex;
+    width: 100%;
+    min-width: 768px;
+    height: calc(100vh - 90px);
+    background-color: #170f23;
+}
+
+.zm-sidebar .zm-sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

@@ -1,9 +1,12 @@
 import Aside from "./aside/Aside";
+import './App.css'
 
 function App() {
   return (
       <div className="zm-section zm-layout has-player">
-        <Aside/>
+        <div className="zm-sidebar-wrapper">
+          <Aside/>
+        </div>
       </div>
   );
 }

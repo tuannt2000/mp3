@@ -1,0 +1,42 @@
+.zm-sidebar-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.zm-sidebar .zm-navbar {
+    width: 100%;
+}
+
+.zm-sidebar .zm-navbar .zm-navbar-brand {
+    width: 240px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    padding: 0 25px 0 28px;
+    display: flex;
+    align-items: center;
+}
+
+.zm-sidebar .zm-navbar .zm-navbar-brand button {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 0;
+}
+
+.zm-btn {
+    font-size: 14px;
+    border: 0;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.zmp3-logo {
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    background: url('./images/logo-dark.svg') 50%/contain no-repeat;
+}
