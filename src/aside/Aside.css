@@ -13,3 +13,17 @@
     flex-direction: column;
     height: 100%;
 }
+
+.sidebar-divide {
+    position: relative;
+    height: 1px;
+}
+
+.sidebar-divide:after {
+    content: "";
+    border-top: 1px solid hsla(0,0%,100%,0.1);
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 0;
+}

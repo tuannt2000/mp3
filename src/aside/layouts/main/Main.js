@@ -1,4 +1,7 @@
-import { Routes,Route,Link } from 'react-router-dom'
+import clsx from 'clsx'
+import { useState } from 'react'
+
+import { Link } from 'react-router-dom'
 import './Main.css'
 
 const sidebarMain = [
@@ -35,12 +38,24 @@ const sidebarMain = [
 ]
 
 function Main() {
+    const [sidebarId, setSidebarId] = useState(2);
+
+    const handleClick = (id) => {
+        setSidebarId(id)
+    }
+
     return (
         <div className="zm-navbar zm-navbar-main">
             <ul className="zm-navbar-menu">
                 {sidebarMain.map(value => {
                     return (
-                        <li key={value.id} className="zm-navbar-item">
+                        <li 
+                            key={value.id} 
+                            className={clsx('zm-navbar-item',{
+                                'is-active': sidebarId === value.id,
+                            })} 
+                            onClick={() => handleClick(value.id)}
+                        >
                             <Link to={value.link}>
                                 <img src={value.icon} alt={value.title} />
                                 <span>{value.title}</span>
