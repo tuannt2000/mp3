@@ -1,3 +1,5 @@
+// viết ngắn gọn lấy reducer khi import
+
 import { useContext } from "react";
 import Context from "./Context";
 
