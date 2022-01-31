@@ -1,5 +1,6 @@
 import Main from "./components/Main";
 import Vip from "./components/Vip";
+import MyMusic from "./components/MyMusic";
 import './Scrollbar.css'
 
 function Scrollbar() {
@@ -19,6 +20,7 @@ function Scrollbar() {
         >
             <Main/>
             <Vip/>
+            <MyMusic/>
         </div>
     )
 }
