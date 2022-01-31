@@ -1,14 +1,8 @@
 import { 
-    SET_TODO_INPUT,
-    ADD_TODO 
+    SET_TITLE,
 } from './constants'
 
-export const setTodoInput = payload => ({
-    type: SET_TODO_INPUT,
-    payload
-})
-
-export const addTodo = payload => ({
-    type: ADD_TODO,
+export const setTitle = payload => ({
+    type: SET_TITLE,
     payload
 })

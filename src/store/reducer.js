@@ -1,21 +1,15 @@
-import { SET_TODO_INPUT,ADD_TODO } from './constants'
+import { SET_TITLE } from './constants'
 
 const initState = {
-    todos: [],
-    todoInput: '',
+    title: '',
 }
 
 function reducer(state,action) {
     switch (action.type) {
-        case SET_TODO_INPUT:
+        case SET_TITLE:
             return {
                 ...state,
-                todoInput: action.payload
-            }
-        case ADD_TODO:
-            return {
-                ...state,
-                todos: [...state.todos, action.payload]
+                title: action.payload
             }
         default:
             throw new Error('Invalid action')

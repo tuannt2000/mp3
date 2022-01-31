@@ -28,6 +28,10 @@
     position: relative;
 }
 
+.zm-btn a{
+    display: inline-block;
+}
+
 .zmp3-logo {
     width: 120px;
     height: 40px;
