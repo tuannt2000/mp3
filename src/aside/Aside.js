@@ -1,5 +1,8 @@
 import Brand from './layouts/brand/Brand';
 import Main from './layouts/main/Main';
+import Scrollbar from './layouts/scrollbar/Scrollbar'
+import Track from './layouts/scrollbar/Track'
+import AddPlaylist from './layouts/addPlaylist/AddPlaylist';
 import './Aside.css'
 
 function Aside() {
@@ -17,8 +20,10 @@ function Aside() {
                         height: "100%"
                     }
                 }>
-
+                    <Scrollbar/>
+                    <Track/>
                 </div>
+                <AddPlaylist/>
             </div>
         </div>
     )

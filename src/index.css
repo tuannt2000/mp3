@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+body ::-webkit-scrollbar {
+  width: 6px;
+}
+
 button, optgroup, select {
   user-select: none;
 }
