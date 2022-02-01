@@ -9,28 +9,28 @@ const sidebarMain = [
     {
         id : 1,
         title : 'Nhạc Mới',
-        icon : './images/icon6.svg',
+        icon : window.location.origin + '/images/icon6.svg',
         link : '/moi-phat-hanh',
         documentTitle : '#zingchart tuần, #zingchart Zing - Bài hát'
     },
     {
         id : 2,
         title : 'Thể Loại',
-        icon : './images/icon7.svg',
+        icon : window.location.origin + '/images/icon7.svg',
         link : '/hub',
         documentTitle : 'Chủ Đề Nhạc Hot | Tuyển tập nhạc hay chọn lọc'
     },
     {
         id : 3,
         title : 'Top100',
-        icon : './images/icon8.svg',
+        icon : window.location.origin + '/images/icon8.svg',
         link : '/top100',
         documentTitle : 'Top 100 | Tuyển tập nhạc hay chọn lọc'
     },
     {
         id : 4,
         title : 'MV',
-        icon : './images/icon9.svg',
+        icon : window.location.origin + '/images/icon9.svg',
         link : '/the-loai-video',
         documentTitle : 'Video | Tuyển tập nhạc hay chọn lọc'
     }

@@ -10,36 +10,36 @@ const sidebarMain = [
     {
         id : 1,
         title : 'Cá Nhân',
-        icon : './images/icon1.svg',
-        link : '/mymusic',
+        icon : window.location.origin + '/images/icon1.svg',
+        link : 'mymusic',
         documentTitle : 'Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại'
     },
     {
         id : 2,
         title : 'Khám Phá',
-        icon : './images/icon2.svg',
-        link : '/',
+        icon : window.location.origin + '/images/icon2.svg',
+        link : '',
         documentTitle : 'Zing MP3 | Nghe tải nhạc chất lượng cao trên desktop, mobile và TV'
     },
     {
         id : 3,
         title : "#zingchart",
-        icon : './images/icon3.svg',
-        link : '/zing-chart',
+        icon : window.location.origin + '/images/icon3.svg',
+        link : 'zing-chart',
         documentTitle : '#zingchart | Xem bài hát, album, MV đang hot nhất hiện tại'
     },
     {
         id : 4,
         title : 'Radio',
-        icon : './images/icon4.svg',
-        link : '/radio',
+        icon : window.location.origin + '/images/icon4.svg',
+        link : 'radio',
         documentTitle : 'Radio | Xem bài hát, album, MV đang hot nhất hiện tại'
     },
     {
         id : 5,
         title : 'Theo Dõi',
-        icon : './images/icon5.svg',
-        link : '/the-loai-nghe-si',
+        icon : window.location.origin + '/images/icon5.svg',
+        link : 'the-loai-nghe-si',
         documentTitle : 'Nghệ sĩ | Xem bài hát, album, MV đang hot nhất hiện tại'
     }
 ]
@@ -47,13 +47,14 @@ const sidebarMain = [
 function Main() {
     const [state, dispatch] = useStore();
 
-    const currentURL = window.location.pathname;
+    const currentURL = window.location.pathname.split('/')[1];
 
     useEffect(() => {
         let firstTitle;
 
         sidebarMain.forEach(element => {
-            if(window.location.pathname === element.link) firstTitle = element.documentTitle
+            if(window.location.pathname.split('/')[1] === element.link)
+                firstTitle = element.documentTitle
         });
         
         if(state.title) document.title = state.title 
