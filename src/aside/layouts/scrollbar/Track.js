@@ -11,7 +11,7 @@ function Track(props,ref) {
                     position: 'absolute',
                     width: 4, 
                     transition: 'opacity 200ms ease 0s',
-                    opacity: 1,
+                    opacity: 0,
                     right: 2,
                     top: 2,
                     bottom: 2,
