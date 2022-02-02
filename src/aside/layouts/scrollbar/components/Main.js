@@ -7,7 +7,7 @@ import { useStore,actions } from '../../../../store'
 function Main({sidebarMain}) {
     const [state, dispatch] = useStore();
 
-    const currentURL = window.location.pathname;
+    const currentURL = window.location.pathname.split('/')[1];
 
     const handleClick = (title) => {
         dispatch(actions.setTitle(title))

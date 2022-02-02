@@ -3,28 +3,7 @@ import './MyMusic.css'
 
 import { useStore,actions } from '../../../../store'
 
-const navbarItem = [
-    {
-        id : 1,
-        title : 'Bài hát',
-        link : '/mymusic/library/song',
-        icon : 'https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg',
-    },
-    {
-        id : 2,
-        title : 'Playlist',
-        link : '/mymusic/library/playlist',
-        icon : 'https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg'
-    },
-    {
-        id : 3,
-        title : 'Gần đây',
-        link : '/mymusic/history',
-        icon : 'https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg'
-    }
-]
-
-function MyMusic() {
+function MyMusic({navbarItem}) {
     const [state, dispatch] = useStore();
 
     const handleClick = () => {

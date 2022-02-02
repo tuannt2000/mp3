@@ -5,7 +5,7 @@ import Track from './layouts/scrollbar/Track'
 import AddPlaylist from './layouts/addPlaylist/AddPlaylist';
 import './Aside.css'
 
-import { useEffect } from 'react';
+import { useEffect,useRef } from 'react';
 
 import { useStore} from '../store'
 
@@ -52,49 +52,75 @@ const sidebarScrollMain = [
         id : 6,
         title : 'Nhạc Mới',
         icon : window.location.origin + '/images/icon6.svg',
-        link : '/moi-phat-hanh',
+        link : 'moi-phat-hanh',
         documentTitle : '#zingchart tuần, #zingchart Zing - Bài hát'
     },
     {
         id : 7,
         title : 'Thể Loại',
         icon : window.location.origin + '/images/icon7.svg',
-        link : '/hub',
+        link : 'hub',
         documentTitle : 'Chủ Đề Nhạc Hot | Tuyển tập nhạc hay chọn lọc'
     },
     {
         id : 8,
         title : 'Top100',
         icon : window.location.origin + '/images/icon8.svg',
-        link : '/top100',
+        link : 'top100',
         documentTitle : 'Top 100 | Tuyển tập nhạc hay chọn lọc'
     },
     {
         id : 9,
         title : 'MV',
         icon : window.location.origin + '/images/icon9.svg',
-        link : '/the-loai-video',
+        link : 'the-loai-video',
         documentTitle : 'Video | Tuyển tập nhạc hay chọn lọc'
+    }
+]
+
+const navbarItem = [
+    {
+        id : 10,
+        title : 'Bài hát',
+        link : 'mymusic/library/song',
+        icon : 'https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg',
+        documentTitle : 'Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại'
+    },
+    {
+        id : 11,
+        title : 'Playlist',
+        link : 'mymusic/library/playlist',
+        icon : 'https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg',
+        documentTitle : 'Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại'
+    },
+    {
+        id : 12,
+        title : 'Gần đây',
+        link : 'mymusic/history',
+        icon : 'https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg',
+        documentTitle : 'Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại'
     }
 ]
 
 function Aside() {
     const [state, dispatch] = useStore();
 
+    const scrollRef = useRef();
+
     useEffect(() => {
         let firstTitle;
 
-        const sidebar = sidebarMain.concat(sidebarScrollMain)
+        const sidebar = sidebarMain.concat(sidebarScrollMain,navbarItem,state.playlist);
 
         sidebar.forEach(element => {
-            if(window.location.pathname.split('/')[1] === element.link)
+            if(window.location.pathname === '/' + element.link)
                 firstTitle = element.documentTitle
         });
         
         if(state.title) document.title = state.title 
         else if(firstTitle) document.title = firstTitle
 
-    },[state.title])
+    },[state.title,state.playlist])
 
     return (
         <div className="zm-sidebar">
@@ -110,8 +136,12 @@ function Aside() {
                         height: "100%"
                     }
                 }>
-                    <Scrollbar sidebarScrollMain={sidebarScrollMain}/>
-                    <Track/>
+                    <Scrollbar 
+                        sidebarScrollMain={sidebarScrollMain}
+                        navbarItem={navbarItem}
+                        ref={scrollRef}
+                    />
+                    <Track ref={scrollRef} />
                 </div>
                 <AddPlaylist/>
             </div>

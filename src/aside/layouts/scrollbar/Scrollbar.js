@@ -4,10 +4,28 @@ import MyMusic from "./components/MyMusic";
 import Playlist from "./components/Playlist";
 import './Scrollbar.css'
 
-function Scrollbar({sidebarScrollMain}) {
+import { useEffect,useRef,forwardRef } from 'react';
+
+function Scrollbar({sidebarScrollMain,navbarItem},ref) {
+    const scrollRef = useRef();
+
+    useEffect(() => {
+        const scroll = scrollRef.current
+
+        const handleScroll = () => {
+            ref.current.style.transform = 'translateY(' + scroll.scrollTop + 'px)';
+        }
+        
+        scroll.addEventListener('scroll', handleScroll);
+
+        return () => {
+            scroll.removeEventListener('scroll', handleScroll);
+        }
+    })
 
     return (
         <div 
+            ref={scrollRef}
             className="zm-sidebar-scrollbar"
             style={
                 {
@@ -21,10 +39,10 @@ function Scrollbar({sidebarScrollMain}) {
         >
             <Main sidebarMain={sidebarScrollMain}/>
             <Vip/>
-            <MyMusic/>
+            <MyMusic navbarItem={navbarItem} />
             <Playlist/>
         </div>
     )
 }
 
-export default Scrollbar;
+export default forwardRef(Scrollbar);
