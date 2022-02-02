@@ -38,3 +38,7 @@
     line-height: 66%;
     display: inline-block;
 }
+
+.zm-navbar-my-music .main-title .zm-btn:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}

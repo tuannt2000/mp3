@@ -2,6 +2,20 @@ import { SET_TITLE } from './constants'
 
 const initState = {
     title: '',
+    playlist: [
+        {
+            id : 1,
+            title : 'Việt nam',
+            link : 'playlist/viet-nam',
+            documentTitle : 'Việt nam | Album 320 lossless'
+        },
+        {
+            id : 2,
+            title : 'Nhật',
+            link : 'playlist/nhat',
+            documentTitle : 'Nhật | Album 320 lossless' 
+        }
+    ]
 }
 
 function reducer(state,action) {

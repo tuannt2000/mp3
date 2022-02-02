@@ -1,0 +1,57 @@
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a {
+    padding: 0 25px!important;
+    height: 32px;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a{
+    text-transform: none;
+    font-weight: 400;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item.is-one-row span {
+    overflow: hidden;
+    width: 100%;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a button {
+    display: none;
+    padding: 0!important;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item button {
+    text-transform: none;
+    font-weight: 400;
+    padding: 8px 25px!important;
+}
+
+.zm-sidebar .zm-navbar-menu .zm-navbar-item button {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 25px;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a button img{
+    height: 13px;
+    width: 13px;
+    margin-right: 0;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.zm-sidebar .zm-navbar-menu .zm-navbar-item img {
+    margin-right: 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a:hover button {
+    display: block;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a button:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}

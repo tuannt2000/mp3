@@ -1,9 +1,10 @@
 import Main from "./components/Main";
 import Vip from "./components/Vip";
 import MyMusic from "./components/MyMusic";
+import Playlist from "./components/Playlist";
 import './Scrollbar.css'
 
-function Scrollbar() {
+function Scrollbar({sidebarScrollMain}) {
 
     return (
         <div 
@@ -18,9 +19,10 @@ function Scrollbar() {
                 }
             }
         >
-            <Main/>
+            <Main sidebarMain={sidebarScrollMain}/>
             <Vip/>
             <MyMusic/>
+            <Playlist/>
         </div>
     )
 }

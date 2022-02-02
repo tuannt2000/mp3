@@ -5,12 +5,102 @@ import Track from './layouts/scrollbar/Track'
 import AddPlaylist from './layouts/addPlaylist/AddPlaylist';
 import './Aside.css'
 
+import { useEffect } from 'react';
+
+import { useStore} from '../store'
+
+const sidebarMain = [
+    {
+        id : 1,
+        title : 'Cá Nhân',
+        icon : window.location.origin + '/images/icon1.svg',
+        link : 'mymusic',
+        documentTitle : 'Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại'
+    },
+    {
+        id : 2,
+        title : 'Khám Phá',
+        icon : window.location.origin + '/images/icon2.svg',
+        link : '',
+        documentTitle : 'Zing MP3 | Nghe tải nhạc chất lượng cao trên desktop, mobile và TV'
+    },
+    {
+        id : 3,
+        title : "#zingchart",
+        icon : window.location.origin + '/images/icon3.svg',
+        link : 'zing-chart',
+        documentTitle : '#zingchart | Xem bài hát, album, MV đang hot nhất hiện tại'
+    },
+    {
+        id : 4,
+        title : 'Radio',
+        icon : window.location.origin + '/images/icon4.svg',
+        link : 'radio',
+        documentTitle : 'Radio | Xem bài hát, album, MV đang hot nhất hiện tại'
+    },
+    {
+        id : 5,
+        title : 'Theo Dõi',
+        icon : window.location.origin + '/images/icon5.svg',
+        link : 'the-loai-nghe-si',
+        documentTitle : 'Nghệ sĩ | Xem bài hát, album, MV đang hot nhất hiện tại'
+    }
+]
+
+const sidebarScrollMain = [
+    {
+        id : 6,
+        title : 'Nhạc Mới',
+        icon : window.location.origin + '/images/icon6.svg',
+        link : '/moi-phat-hanh',
+        documentTitle : '#zingchart tuần, #zingchart Zing - Bài hát'
+    },
+    {
+        id : 7,
+        title : 'Thể Loại',
+        icon : window.location.origin + '/images/icon7.svg',
+        link : '/hub',
+        documentTitle : 'Chủ Đề Nhạc Hot | Tuyển tập nhạc hay chọn lọc'
+    },
+    {
+        id : 8,
+        title : 'Top100',
+        icon : window.location.origin + '/images/icon8.svg',
+        link : '/top100',
+        documentTitle : 'Top 100 | Tuyển tập nhạc hay chọn lọc'
+    },
+    {
+        id : 9,
+        title : 'MV',
+        icon : window.location.origin + '/images/icon9.svg',
+        link : '/the-loai-video',
+        documentTitle : 'Video | Tuyển tập nhạc hay chọn lọc'
+    }
+]
+
 function Aside() {
+    const [state, dispatch] = useStore();
+
+    useEffect(() => {
+        let firstTitle;
+
+        const sidebar = sidebarMain.concat(sidebarScrollMain)
+
+        sidebar.forEach(element => {
+            if(window.location.pathname.split('/')[1] === element.link)
+                firstTitle = element.documentTitle
+        });
+        
+        if(state.title) document.title = state.title 
+        else if(firstTitle) document.title = firstTitle
+
+    },[state.title])
+
     return (
         <div className="zm-sidebar">
             <div className="zm-sidebar-wrapper">
                 <Brand/>
-                <Main/>
+                <Main sidebarMain={sidebarMain}/>
                 <div className="sidebar-divide"></div>
                 <div style={
                     {
@@ -20,7 +110,7 @@ function Aside() {
                         height: "100%"
                     }
                 }>
-                    <Scrollbar/>
+                    <Scrollbar sidebarScrollMain={sidebarScrollMain}/>
                     <Track/>
                 </div>
                 <AddPlaylist/>
