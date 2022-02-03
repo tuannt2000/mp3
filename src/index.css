@@ -1,3 +1,5 @@
+*{  box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -48,4 +50,28 @@ blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html
 
 ol, p, ul {
   list-style: none;
+}
+
+.input {
+  box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+  max-width: 100%;
+  width: 100%;
+  align-items: center;
+  border: 1px solid hsla(0,0%,100%,0.1);
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding: calc(0.5em - 1px) calc(0.75em - 1px);
+  vertical-align: top;
+}
+
+:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #dadada;
 }

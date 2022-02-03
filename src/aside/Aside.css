@@ -3,7 +3,7 @@
     z-index: 100;
     width: 240px;
     background-color: hsla(0,0%,100%,0.05);
-    height: calc(100vh - 90px);
+    height: 100vh;
     padding-top: 70px;
     padding-bottom: 54px;
 }

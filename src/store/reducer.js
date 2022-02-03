@@ -1,8 +1,13 @@
-import { SET_TITLE } from './constants'
+import { 
+    SET_TITLE,
+    SET_PLAYLIST,
+    ADD_PLAYLIST,
+    SET_SHOW_PLAYLIST
+} from './constants'
 
 const initState = {
     title: '',
-    playlist: [
+    playlists: [
         {
             id : 1,
             title : 'Việt nam',
@@ -15,7 +20,9 @@ const initState = {
             link : 'playlist/nhat',
             documentTitle : 'Nhật | Album 320 lossless' 
         }
-    ]
+    ],
+    playlist: '',
+    showPlaylist: false
 }
 
 function reducer(state,action) {
@@ -24,6 +31,26 @@ function reducer(state,action) {
             return {
                 ...state,
                 title: action.payload
+            }
+        case SET_PLAYLIST:
+            return {
+                ...state,
+                playlist: action.payload
+            }
+        case ADD_PLAYLIST:
+            return {
+                ...state,
+                playlists: [...state.playlists,{
+                    id : state.playlists.length + 1,
+                    title : action.payload,
+                    link : 'playlist/' + action.payload,
+                    documentTitle: action.payload + ' | Album 320 lossless'
+                }]
+            }
+        case SET_SHOW_PLAYLIST:
+            return {
+                ...state,
+                showPlaylist: !state.showPlaylist,
             }
         default:
             throw new Error('Invalid action')

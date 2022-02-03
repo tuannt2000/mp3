@@ -13,7 +13,7 @@ function Playlist() {
     return (
         <div className="zm-navbar zm-navbar-my-playlist">
             <ul className="zm-navbar-menu playlist-personal">
-                {state.playlist.map(value => {
+                {state.playlists.map(value => {
                     return (
                         <li
                             key={value.id}

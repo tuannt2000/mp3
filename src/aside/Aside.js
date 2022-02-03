@@ -103,14 +103,14 @@ const navbarItem = [
 ]
 
 function Aside() {
-    const [state, dispatch] = useStore();
+    const [state] = useStore();
 
     const scrollRef = useRef();
 
     useEffect(() => {
         let firstTitle;
 
-        const sidebar = sidebarMain.concat(sidebarScrollMain,navbarItem,state.playlist);
+        const sidebar = sidebarMain.concat(sidebarScrollMain,navbarItem,state.playlists);
 
         sidebar.forEach(element => {
             if(window.location.pathname === '/' + element.link)
@@ -120,7 +120,7 @@ function Aside() {
         if(state.title) document.title = state.title 
         else if(firstTitle) document.title = firstTitle
 
-    },[state.title,state.playlist])
+    },[state.title,state.playlists])
 
     return (
         <div className="zm-sidebar">
