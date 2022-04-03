@@ -6,6 +6,7 @@ function AddPlaylist() {
     const [state,dispatch] = useStore();
 
     const handleClick = () => {
+        dispatch(actions.setShowCoolPortal(true));
         dispatch(actions.setShowPlaylist())
     }
 

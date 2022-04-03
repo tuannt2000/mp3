@@ -4,16 +4,16 @@ import MyMusic from "./components/MyMusic";
 import Playlist from "./components/Playlist";
 import './Scrollbar.css'
 
-import { useEffect,useRef,forwardRef } from 'react';
+import { useEffect,useRef } from 'react';
 
-function Scrollbar({sidebarScrollMain,navbarItem},ref) {
+function Scrollbar({sidebarScrollMain,navbarItem,refTrask}) {
     const scrollRef = useRef();
 
     useEffect(() => {
         const scroll = scrollRef.current
 
         const handleScroll = () => {
-            ref.current.style.transform = 'translateY(' + scroll.scrollTop + 'px)';
+            refTrask.current.style.transform = 'translateY(' + scroll.scrollTop + 'px)';
         }
         
         scroll.addEventListener('scroll', handleScroll);
@@ -45,4 +45,4 @@ function Scrollbar({sidebarScrollMain,navbarItem},ref) {
     )
 }
 
-export default forwardRef(Scrollbar);
+export default Scrollbar;

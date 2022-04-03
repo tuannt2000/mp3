@@ -2,7 +2,11 @@ import {
     SET_TITLE,
     SET_PLAYLIST,
     ADD_PLAYLIST,
-    SET_SHOW_PLAYLIST
+    SET_POSITION_MOUSE,
+    SET_SHOW_COOL_PORTAL,
+    SET_SHOW_PLAYLIST,
+    SET_SHOW_CHILD_MENU_PLAYLIST,
+    SET_SHOW_MENU_PLAYLIST,
 } from './constants'
 
 const initState = {
@@ -22,7 +26,12 @@ const initState = {
         }
     ],
     playlist: '',
-    showPlaylist: false
+    positionMousePointerX : 0,
+    positionMousePointerY : 0,
+    showCoolPortal: false,
+    showPlaylist: false,
+    showChildMenuPlaylist: false,
+    setShowMenuPlaylist: false
 }
 
 function reducer(state,action) {
@@ -47,10 +56,31 @@ function reducer(state,action) {
                     documentTitle: action.payload + ' | Album 320 lossless'
                 }]
             }
+        case SET_POSITION_MOUSE:
+            return{
+                ...state,
+                positionMousePointerX : action.pointerX,
+                positionMousePointerY : action.pointerY
+            }
+        case SET_SHOW_COOL_PORTAL:
+            return {
+                ...state,
+                showCoolPortal: action.payload
+            }
         case SET_SHOW_PLAYLIST:
             return {
                 ...state,
-                showPlaylist: !state.showPlaylist,
+                showPlaylist: !state.showPlaylist
+            }
+        case SET_SHOW_CHILD_MENU_PLAYLIST:
+            return {
+                ...state,
+                showChildMenuPlaylist: !state.showChildMenuPlaylist
+            }
+        case SET_SHOW_MENU_PLAYLIST:
+            return {
+                ...state,
+                showMenuPlaylist: action.payload
             }
         default:
             throw new Error('Invalid action')

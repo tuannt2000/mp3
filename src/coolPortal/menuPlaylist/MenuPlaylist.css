@@ -1,0 +1,78 @@
+.zm-portal {
+    z-index: 1070;
+    right: auto;
+    border-radius: 3px;
+    position: absolute;
+    background-color: #231f3b;
+    width: 230px;
+}
+
+.playlist-menu {
+    width: 250px;
+    padding: 10px 0;
+}
+
+.zm-contextmenu {
+    background-color: #432275;;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 101;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 250px;
+}
+
+.menu-list li .zm-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px 10px 14px;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.menu-list--submenu {
+    position: relative;
+}
+
+.menu-list li:hover {
+    background-color: hsla(0,0%,100%,0.1);
+    color: #fff;
+}
+
+.menu-list li .zm-btn img:first-child {
+    margin-right: 15px;
+}
+
+.menu-list li .zm-btn img {
+    padding: 0;
+    font-size: 16px;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.menu-list li .zm-btn span {
+    white-space: nowrap;
+    color: #fff;
+}
+
+.menu-list--submenu .submenu-content.share-content {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.menu-list--submenu .submenu-content {
+    position: absolute;
+    width: 230px;
+    background-color: #432275;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+    border-radius: 8px;
+    left: calc(100% - 15px);
+    top: -10px;
+    z-index: 1;
+    padding: 10px 0;
+}

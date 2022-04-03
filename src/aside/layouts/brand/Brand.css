@@ -18,16 +18,6 @@
     border-radius: 0;
 }
 
-.zm-btn {
-    font-size: 14px;
-    border: 0;
-    font-weight: 400;
-    text-transform: none;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-}
-
 .zm-btn a{
     display: inline-block;
 }

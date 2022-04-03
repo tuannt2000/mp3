@@ -2,18 +2,21 @@ import Aside from "./aside/Aside";
 import './App.css'
 
 import { useStore } from './store';
-import AddPlaylist from './addPlaylist/AddPlaylist';
+
+import CoolPortal from "./coolPortal/CoolPortal";
 
 function App() {
   const [state] = useStore();
-
+  
   return (
-    <div>
-      <div className="zm-section zm-layout has-player">
-        <Aside/>
+    <>
+      <div>
+        <div className="zm-section zm-layout has-player">
+          <Aside/>
+        </div>  
       </div>
-      {state.showPlaylist && <AddPlaylist/>}
-    </div>
+      {state.showCoolPortal && <CoolPortal />}
+    </>
   );
 }
 

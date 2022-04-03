@@ -139,7 +139,7 @@ function Aside() {
                     <Scrollbar 
                         sidebarScrollMain={sidebarScrollMain}
                         navbarItem={navbarItem}
-                        ref={scrollRef}
+                        refTrask={scrollRef}
                     />
                     <Track ref={scrollRef} />
                 </div>
