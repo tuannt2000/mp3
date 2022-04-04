@@ -11,7 +11,7 @@ function Playlist() {
     }
 
     const handleClickButtonMore = (e) => {
-        dispatch(actions.setPositionMouse(e.pageX + 10,e.pageY - 333));
+        dispatch(actions.setPositionMouse(e.pageX + 10,e.pageY - 290));
         dispatch(actions.setShowCoolPortal(true));
         dispatch(actions.setShowMenuPlaylist(true));
     }
@@ -30,7 +30,7 @@ function Playlist() {
                                 <span>{value.title}</span>
                                 <button 
                                     className="zm-btn zm-tooltip-btn is-hover-circle button"
-                                    onClick={handleClickButtonMore}    
+                                    onClick={handleClickButtonMore}   
                                 >
                                     <img src={window.location.origin + '/images/more.svg'} alt="more" />
                                 </button>

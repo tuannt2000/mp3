@@ -2,7 +2,8 @@ import ChildMenuPlaylist from './ChildMenuPlaylist';
 import { useStore,actions } from '../../store'
 
 import './MenuPlaylist.css'
-import { useEffect } from 'react';
+
+import useOnclickOutside from "react-cool-onclickoutside";
 
 const menu = [
     {
@@ -45,6 +46,11 @@ const menu = [
 function MenuPlaylist() {
     const [state, dispatch] = useStore();
 
+    const menuPlaylistRef = useOnclickOutside(() => {
+        dispatch(actions.setShowMenuPlaylist(false));
+        dispatch(actions.setShowCoolPortal(false));
+    })
+
     const handleHover = () => {
         dispatch(actions.setShowChildMenuPlaylist())
     }
@@ -63,7 +69,10 @@ function MenuPlaylist() {
                 }
             }
         >
-            <div className="zm-contextmenu playlist-menu">
+            <div 
+                className="zm-contextmenu playlist-menu"
+                ref={menuPlaylistRef}    
+            >
                 <div className="menu">
                     <ul className="menu-list">
                         {menu.map(value => {

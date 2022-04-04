@@ -2,17 +2,17 @@ const child_menu = [
     {
         id: 1,
         title: 'Facebook',
-        icon: window.location.origin + '/images/delete.svg',
+        icon: window.location.origin + '/images/facebook-brands.svg',
     },
     {
         id: 2,
         title: 'Zalo',
-        icon: window.location.origin + '/images/delete.svg',
+        icon: window.location.origin + '/images/bolt-solid.svg',
     },
     {
         id: 3,
         title: 'Mã nhúng',
-        icon: window.location.origin + '/images/delete.svg',
+        icon: window.location.origin + '/images/arrows-rotate-solid.svg',
     }
 ]
 
