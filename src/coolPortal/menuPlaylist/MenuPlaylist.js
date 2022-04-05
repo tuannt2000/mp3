@@ -9,37 +9,37 @@ const menu = [
     {
         id: 1,
         title: 'Thêm vào danh sách phát',
-        icon: window.location.origin + '/images/plus.svg'
+        icon: window.location.origin + '/images/coolPortal/plus.svg'
     },
     {
         id: 2,
         title: 'Bình luận',
-        icon: window.location.origin + '/images/comment.svg'
+        icon: window.location.origin + '/images/coolPortal/comment.svg'
     },
     {
         id: 3,
         title: 'Tải xuống',
-        icon: window.location.origin + '/images/download.svg'
+        icon: window.location.origin + '/images/coolPortal/download.svg'
     },
     {
         id: 4,
         title: 'Sao chép link',
-        icon: window.location.origin + '/images/link.svg'
+        icon: window.location.origin + '/images/coolPortal/link.svg'
     },
     {
         id: 5,
         title: 'Chia sẻ',
-        icon: window.location.origin + '/images/share.svg',
+        icon: window.location.origin + '/images/coolPortal/share.svg',
     },
     {
         id: 6,
         title: 'Chỉnh sửa playlist',
-        icon: window.location.origin + '/images/edit.svg'
+        icon: window.location.origin + '/images/coolPortal/edit.svg'
     },
     {
         id: 7,
         title: 'Xóa playlist',
-        icon: window.location.origin + '/images/delete.svg'
+        icon: window.location.origin + '/images/coolPortal/delete.svg'
     }
 ]
 

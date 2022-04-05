@@ -1,0 +1,70 @@
+.zm-header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 240px;
+    top: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 59px;
+    z-index: 99;
+    min-width: 660px;
+}   
+
+.zm-header .level {
+    width: 100%;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.zm-header .level-left {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.level .level-left, .level .level-right {
+    display: flex;
+}
+
+.level-left {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.level-left, .level-right {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.level .level-left+.level-right {
+    margin-top: 0;
+}
+
+.level-right {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.zm-header .level-right .setting-item {
+    position: relative;
+    margin-right: 10px;
+}
+
+.zm-header .level-right .setting-item>.zm-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0,0%,100%,0.1);
+    border-radius: 999px;
+}
+
+.zm-header .level-right .setting-item>.zm-btn img {
+    width: 20px;
+    height: 20px;
+}

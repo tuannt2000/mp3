@@ -32,7 +32,7 @@ function Playlist() {
                                     className="zm-btn zm-tooltip-btn is-hover-circle button"
                                     onClick={handleClickButtonMore}   
                                 >
-                                    <img src={window.location.origin + '/images/more.svg'} alt="more" />
+                                    <img src={window.location.origin + '/images/aside/more.svg'} alt="more" />
                                 </button>
                             </Link>
                         </li>
