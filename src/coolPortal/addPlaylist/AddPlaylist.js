@@ -43,7 +43,7 @@ function AddPlaylist() {
                                 className="zm-btn zm-tooltip-btn close-btn is-hover-circle button"
                                 onClick={handleClose}
                             >
-                                <img src={window.location.origin + '/images/close.svg'} alt="close" />
+                                <i className="fas fa-times"></i>
                             </button>
                             <h3 className="title">Tạo playlist mới</h3>
                             <form onSubmit={e => handleSubmit(e)}>

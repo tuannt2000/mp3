@@ -64,7 +64,6 @@
     border-radius: 999px;
 }
 
-.zm-header .level-right .setting-item>.zm-btn img {
-    width: 20px;
-    height: 20px;
+.zm-header .level-right .setting-item>.zm-btn i {
+    font-size: 20px;
 }

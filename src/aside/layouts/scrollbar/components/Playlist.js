@@ -1,4 +1,3 @@
-import './Playlist.css'
 import { Link } from 'react-router-dom'
 
 import { useStore,actions } from '../../../../store'
@@ -32,7 +31,7 @@ function Playlist() {
                                     className="zm-btn zm-tooltip-btn is-hover-circle button"
                                     onClick={handleClickButtonMore}   
                                 >
-                                    <img src={window.location.origin + '/images/aside/more.svg'} alt="more" />
+                                    <i className="fas fa-caret-down"></i>
                                 </button>
                             </Link>
                         </li>

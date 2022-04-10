@@ -6,7 +6,7 @@ function Topic() {
             <button 
                 className="zm-btn zm-tooltip-btn is-hover-circle button" 
             >
-                <img src={window.location.origin + "/images/header/levelRight/topic.svg"} alt="topic"/>
+                <i className="fas fa-tshirt"></i>
             </button>   
         </div>
     );

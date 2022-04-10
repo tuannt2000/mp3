@@ -2,17 +2,17 @@ const child_menu = [
     {
         id: 1,
         title: 'Facebook',
-        icon: window.location.origin + '/images/coolPortal/facebook-brands.svg',
+        icon: 'fab fa-facebook'
     },
     {
         id: 2,
         title: 'Zalo',
-        icon: window.location.origin + '/images/coolPortal/bolt-solid.svg',
+        icon: 'fas fa-bolt'
     },
     {
         id: 3,
         title: 'Mã nhúng',
-        icon: window.location.origin + '/images/coolPortal/arrows-rotate-solid.svg',
+        icon: 'fas fa-expand-arrows'
     }
 ]
 
@@ -28,7 +28,7 @@ function ChildMenuPlaylist() {
                                 key={value.id}
                             >
                                 <button className="zm-btn button">
-                                    <img src={value.icon} alt={value.title}/>
+                                    <i className={value.icon}></i>
                                     <span>{value.title}</span>
                                 </button>
                             </li>

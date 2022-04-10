@@ -27,3 +27,237 @@
     right: 25px;
     top: 0;
 }
+
+.zm-navbar.zm-navbar-main{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item {
+    font-weight: 700;
+    color: #dadada;
+    border-left: 3px solid transparent;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item.is-active {
+    background-color: hsla(0,0%,100%,0.1);
+    color: #fff;
+    border-left: 3px solid #7200a1;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item a{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 25px;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item a i{
+    font-size: 22px;
+    margin-right: 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.zm-navbar .zm-navbar-menu .zm-navbar-item a span{
+    white-space: nowrap;
+    line-height: normal;
+}
+
+.zm-sidebar-scrollbar {
+    margin-top: 10px;
+}
+
+.thumb-vertical {
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 2px;
+}
+
+.add-playlist-sidebar .zm-btn {
+    position: fixed;
+    width: 240px;
+    left: 0;
+    height: 54px;
+    border-top: 1px solid hsla(0, 0%, 100%,0.1);
+    padding: 0 28px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    bottom: 0;
+}
+
+.zm-btn {
+    font-size: 14px;
+    border-radius: 999px;
+    line-height: normal;
+    border: 0;
+    display: inline-block;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.add-playlist-sidebar i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #fff;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.mar-b-0 {
+    margin-bottom: 0!important;
+}
+
+.mar-t-5 {
+    margin-top: 5px!important;
+}
+
+.pad-t-15 {
+    padding-top: 15px!important;
+}
+
+.zm-navbar-my-music {
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.zm-navbar-my-music .main-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
+}
+
+.zm-navbar-my-music .title {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 28px 8px;
+    white-space: nowrap;
+}
+
+.zm-navbar-my-music .edit-btn {
+    display: none;
+}
+
+.zm-navbar-my-music:hover .edit-btn {
+    display: block;
+}
+
+.zm-tooltip-btn i {
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.zm-navbar-my-music .main-title .zm-btn:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a {
+    padding: 0 25px!important;
+    height: 32px;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a{
+    text-transform: none;
+    font-weight: 400;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item.is-one-row span {
+    overflow: hidden;
+    width: 100%;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a button {
+    display: none;
+    padding: 0!important;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item button {
+    text-transform: none;
+    font-weight: 400;
+    padding: 8px 25px!important;
+}
+
+.zm-sidebar .zm-navbar-menu .zm-navbar-item button {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 25px;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a button i{
+    font-size: 17px;
+    color: #fff;
+    margin-right: 0;
+    line-height: 66%;
+    display: inline-block;
+}
+
+.zm-sidebar .zm-navbar-menu .zm-navbar-item i {
+    margin-right: 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a:hover button {
+    display: block;
+}
+
+.zm-navbar-my-playlist .playlist-personal .is-one-row.zm-navbar-item a button:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}
+
+.vip-banner-sidebar {
+    padding: 15px 8px;
+    border-radius: 8px;
+    margin: 10px 20px;
+    text-align: center;
+    background-image: linear-gradient(117deg,#5a4be7,#c86dd7 102%);
+}
+
+.vip-banner-sidebar .text {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-color: #ffdb00;
+    line-height: 1.67;
+    color: #fff;
+}
+
+.vip-banner-sidebar .zm-btn {
+    background-color: #ffdb00;
+    border-color: #ffdb00;
+    color: #32323d;
+    display: inline-block;
+    padding: 6px 35px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.zm-btn.is-outlined {
+    justify-content: center;
+    align-items: center;
+    border: 1px solid hsla(0, 0%, 100%,0.1);
+    margin: 0 auto;
+}
+
+.is-upper {
+    text-transform: uppercase;
+}

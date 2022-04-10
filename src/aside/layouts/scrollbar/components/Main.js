@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
-import './Main.css'
 
 import { useStore,actions } from '../../../../store'
 
@@ -26,7 +25,7 @@ function Main({sidebarMain}) {
                             onClick={() => handleClick(value.documentTitle)}    
                         >
                             <Link to={value.link}>
-                                <img src={value.icon} alt={value.title} />
+                                <i className={value.icon}></i>
                                 <span>{value.title}</span>
                             </Link>
                         </li>

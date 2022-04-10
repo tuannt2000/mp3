@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import './MyMusic.css'
 
 import { useStore,actions } from '../../../../store'
 
@@ -15,7 +14,7 @@ function MyMusic({navbarItem}) {
             <div className="main-title title">
                 THƯ VIỆN
                 <button className="zm-btn zm-tooltip-btn edit-btn is-hover-circle button">
-                    <img src={window.location.origin + '/images/edit.svg'} alt="edit" />
+                    <i className="fas fa-pen"></i>
                 </button>
             </div>
             <ul className="zm-navbar-menu library-personal">

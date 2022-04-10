@@ -13,35 +13,35 @@ const sidebarMain = [
     {
         id : 1,
         title : 'Cá Nhân',
-        icon : window.location.origin + '/images/aside/icon1.svg',
+        icon : 'far fa-user',
         link : 'mymusic',
         documentTitle : 'Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại'
     },
     {
         id : 2,
         title : 'Khám Phá',
-        icon : window.location.origin + '/images/aside/icon2.svg',
+        icon : 'fab fa-discourse',
         link : '',
         documentTitle : 'Zing MP3 | Nghe tải nhạc chất lượng cao trên desktop, mobile và TV'
     },
     {
         id : 3,
         title : "#zingchart",
-        icon : window.location.origin + '/images/aside/icon3.svg',
+        icon : 'fal fa-chart-pie-alt',
         link : 'zing-chart',
         documentTitle : '#zingchart | Xem bài hát, album, MV đang hot nhất hiện tại'
     },
     {
         id : 4,
         title : 'Radio',
-        icon : window.location.origin + '/images/aside/icon4.svg',
+        icon : 'far fa-broadcast-tower',
         link : 'radio',
         documentTitle : 'Radio | Xem bài hát, album, MV đang hot nhất hiện tại'
     },
     {
         id : 5,
         title : 'Theo Dõi',
-        icon : window.location.origin + '/images/aside/icon5.svg',
+        icon : 'far fa-paper-plane',
         link : 'the-loai-nghe-si',
         documentTitle : 'Nghệ sĩ | Xem bài hát, album, MV đang hot nhất hiện tại'
     }
@@ -51,28 +51,28 @@ const sidebarScrollMain = [
     {
         id : 6,
         title : 'Nhạc Mới',
-        icon : window.location.origin + '/images/aside/icon6.svg',
+        icon : 'fas fa-music',
         link : 'moi-phat-hanh',
         documentTitle : '#zingchart tuần, #zingchart Zing - Bài hát'
     },
     {
         id : 7,
         title : 'Thể Loại',
-        icon : window.location.origin + '/images/aside/icon7.svg',
+        icon : 'fal fa-calendar',
         link : 'hub',
         documentTitle : 'Chủ Đề Nhạc Hot | Tuyển tập nhạc hay chọn lọc'
     },
     {
         id : 8,
         title : 'Top100',
-        icon : window.location.origin + '/images/aside/icon8.svg',
+        icon : 'far fa-star',
         link : 'top100',
         documentTitle : 'Top 100 | Tuyển tập nhạc hay chọn lọc'
     },
     {
         id : 9,
         title : 'MV',
-        icon : window.location.origin + '/images/aside/icon9.svg',
+        icon : 'fas fa-film',
         link : 'the-loai-video',
         documentTitle : 'Video | Tuyển tập nhạc hay chọn lọc'
     }

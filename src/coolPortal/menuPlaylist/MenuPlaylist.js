@@ -9,37 +9,37 @@ const menu = [
     {
         id: 1,
         title: 'Thêm vào danh sách phát',
-        icon: window.location.origin + '/images/coolPortal/plus.svg'
+        icon: 'fas fa-plus'
     },
     {
         id: 2,
         title: 'Bình luận',
-        icon: window.location.origin + '/images/coolPortal/comment.svg'
+        icon: 'far fa-comment'
     },
     {
         id: 3,
         title: 'Tải xuống',
-        icon: window.location.origin + '/images/coolPortal/download.svg'
+        icon: 'fal fa-arrow-to-bottom'
     },
     {
         id: 4,
         title: 'Sao chép link',
-        icon: window.location.origin + '/images/coolPortal/link.svg'
+        icon: 'fas fa-copy'
     },
     {
         id: 5,
         title: 'Chia sẻ',
-        icon: window.location.origin + '/images/coolPortal/share.svg',
+        icon: 'far fa-share',
     },
     {
         id: 6,
         title: 'Chỉnh sửa playlist',
-        icon: window.location.origin + '/images/coolPortal/edit.svg'
+        icon: 'fas fa-pen'
     },
     {
         id: 7,
         title: 'Xóa playlist',
-        icon: window.location.origin + '/images/coolPortal/delete.svg'
+        icon: 'fas fa-trash-alt'
     }
 ]
 
@@ -87,14 +87,14 @@ function MenuPlaylist() {
                                             onMouseLeave={handleHoverOut}
                                         >
                                             <button className="zm-btn button">
-                                                <img src={value.icon} alt={value.title}/>
+                                                <i className={value.icon}></i>
                                                 <span>{value.title}</span>
                                             </button>
                                             {state.showChildMenuPlaylist && <ChildMenuPlaylist />}
                                         </div>
                                     )) || (
                                         <button className="zm-btn button">
-                                            <img src={value.icon} alt={value.title}/>
+                                            <i className={value.icon}></i>
                                             <span>{value.title}</span>
                                         </button>
                                     )}

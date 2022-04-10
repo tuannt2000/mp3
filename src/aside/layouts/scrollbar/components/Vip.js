@@ -1,5 +1,3 @@
-import './Vip.css'
-
 function Vip() {
 
     return (

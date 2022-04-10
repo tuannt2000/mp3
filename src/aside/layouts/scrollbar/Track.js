@@ -1,7 +1,5 @@
 import { forwardRef } from 'react';
 
-import './Track.css'
-
 function Track(props,ref) {
     return (
         <div 

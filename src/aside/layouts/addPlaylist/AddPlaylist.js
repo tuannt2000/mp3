@@ -1,5 +1,3 @@
-import './AddPlaylist.css'
-
 import { useStore,actions } from '../../../store'
 
 function AddPlaylist() {
@@ -13,7 +11,7 @@ function AddPlaylist() {
     return (
         <div className="add-playlist-sidebar">
             <button className="zm-btn button" onClick={handleClick}>
-                <img src={window.location.origin + '/images/plus.svg'} alt="" />
+                <i className="fas fa-plus"></i>
                 <span>Tạo playlist mới</span>
             </button>
         </div>

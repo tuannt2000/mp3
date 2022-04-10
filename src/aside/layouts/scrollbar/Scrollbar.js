@@ -2,7 +2,6 @@ import Main from "./components/Main";
 import Vip from "./components/Vip";
 import MyMusic from "./components/MyMusic";
 import Playlist from "./components/Playlist";
-import './Scrollbar.css'
 
 import { useEffect,useRef } from 'react';
 
