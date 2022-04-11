@@ -75,3 +75,17 @@ ol, p, ul {
 ::-webkit-input-placeholder { /* Edge */
   color: #dadada;
 }
+
+.zm-header .level-left .zm-btn .ic-back, .zm-header .level-left .zm-btn .ic-forward {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.icon {
+  line-height: 66%;
+  display: inline-block;
+}
+
+:focus {
+  outline: none;
+}
